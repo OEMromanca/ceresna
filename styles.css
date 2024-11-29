@@ -1,0 +1,669 @@
+body {
+  max-width: 1920px;
+  max-height: 6043px;
+
+  margin: 0 auto;
+
+  background-color: #fff;
+
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.notification {
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  height: 25px;
+  padding-block: 0.25rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.85rem;
+  z-index: 2;
+}
+
+.main-header {
+  position: fixed;
+  top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 140px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+  z-index: 1; /* uisti sa, že header je pod notif */
+
+  padding-left: 314px;
+  padding-right: 314px;
+}
+
+.main-header nav a {
+  text-transform: uppercase;
+  color: rgb(11, 29, 37);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.left-nav {
+  display: flex;
+  gap: 50px;
+}
+
+.right-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header-logo {
+  width: 112px;
+  margin-left: 55px;
+}
+
+.discount span {
+  border-radius: 50%;
+  padding-inline: 4px;
+  color: #fff;
+  background: #000;
+}
+
+.icon-inner,
+.ion-icon,
+svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+
+  padding: 0 0 182px 314px;
+
+  z-index: -1;
+}
+
+.action-button {
+  padding: 17px 20px;
+  font-size: 0.9rem;
+  color: #000;
+  background-color: #ffffff80;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-60px);
+
+  padding-left: 314px;
+  padding-right: 314px;
+}
+
+.wrapper {
+  max-width: 100%;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+  overflow-x: scroll;
+
+  padding-bottom: 45px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 2px;
+  width: 2px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+  border-radius: 10px;
+}
+.carousel::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.slider-img {
+  width: 305px;
+  height: 305px;
+}
+
+.carousel li {
+  position: relative;
+}
+
+.carousel li[data-new="true"]::before {
+  content: "NOVINKA";
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  background-color: #000;
+  padding: 3px 10px;
+  z-index: 1;
+}
+
+.carousel li a {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.desc {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  color: #000;
+}
+
+.desc div {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.desc div p {
+  font-weight: 400;
+  font-size: 14px;
+  background: none;
+}
+
+.hero-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.hero-txt p {
+  background: #000;
+  padding: 6px 9px;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.hero-txt p,
+h1,
+h4 {
+  color: #fff;
+}
+
+.hero-txt h1 {
+  font-size: 59px;
+  font-weight: 300;
+  margin-top: 14px;
+  margin-left: -3px;
+}
+
+.hero-txt h4 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.hero-txt button {
+  font-size: 13px;
+  color: #000;
+  background-color: rgb(215, 205, 194);
+  cursor: pointer;
+  height: 49px;
+  width: 119px;
+}
+
+.container {
+  padding-inline: 314px;
+  padding-block: 7rem;
+}
+
+.companies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 7rem;
+
+  height: 110px;
+}
+
+.companies div {
+  height: 2px;
+  width: 100px;
+  background-color: #f1f1f1;
+}
+
+.companies li {
+  height: 110px;
+  width: 214px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  background-color: #fbfbfb;
+  padding-inline: 3rem;
+}
+
+.state h1 {
+  color: #000;
+  font-weight: 300;
+  font-size: 4.5rem;
+}
+
+.state article div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.state article div p {
+  font-size: 1.05rem;
+}
+
+.read-more-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 9rem;
+  font-size: 1rem;
+  background: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.read-more-btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 1.6px;
+  width: 2rem;
+  background-color: #000;
+  transition: 0.2s ease;
+}
+
+.state img {
+  width: 39vw;
+  transform: translateY(75px);
+  pointer-events: none;
+}
+
+/* BLOG */
+
+.blog {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.blog h1 {
+  font-size: 2.8rem;
+  color: #000;
+  font-weight: 300;
+}
+
+.blog-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-list li {
+  width: 31.5%;
+}
+
+.blog-list li a {
+  display: flex;
+  flex-direction: column;
+  gap: 8.6rem;
+  color: #000;
+  width: 100%;
+}
+
+.img-cover {
+  content: "";
+  background-color: #f5f5f5;
+  width: 333px;
+  height: 333px;
+}
+
+.blog-list li a img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translate(18%, 18%);
+}
+
+.blog-list li a article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 18rem;
+}
+
+.blog-list li a article h2,
+.blog-list li a article p {
+  color: #151515;
+}
+
+.blog-list li a article h2 {
+  font-weight: 300;
+}
+
+.blog-list li a article p {
+  height: 5.5rem;
+  color: #151515;
+}
+
+/* NEWS */
+.news {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.news-header div {
+  width: 50%;
+  height: 1px;
+  background-color: #cfcfcf;
+  border-radius: 2px;
+}
+
+.email-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.news article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+  width: 19rem;
+}
+
+.news article h2 {
+  color: #000;
+  font-weight: 300;
+  font-size: 2.1rem;
+}
+
+.news article p {
+  font-size: 1rem;
+}
+
+.email-sender {
+  display: flex;
+  align-items: center;
+  padding-block: 6px;
+  border-bottom: 1px solid #000;
+}
+
+.email-sender input {
+  border: none;
+  outline: none;
+  width: 19rem;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+}
+
+.email-sender input::placeholder {
+  color: #f4f3f3;
+}
+
+.email-sender button {
+  background: none;
+  cursor: pointer;
+}
+
+.email-sender button ion-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+:host .ion-icon {
+  stroke: currentcolor;
+}
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-image: url(./images/instagram-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 510px;
+  margin-top: 7rem;
+}
+
+.instagram-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.instagram-header h1 {
+  color: #000;
+  font-weight: 300;
+  font-size: 2.3rem;
+}
+
+.instagram-header a {
+  display: flex;
+  align-items: center;
+  color: #000;
+  gap: 1.25rem;
+  font-weight: 600;
+}
+
+.instagram-header a div {
+  height: 1px;
+  width: 3rem;
+  background-color: #000;
+}
+
+.instagram-list {
+  display: flex;
+  align-items: center;
+  gap: 1.19rem;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  position: relative;
+}
+
+.footer-top img {
+  width: 100%;
+}
+
+.footer-top span {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4rem;
+  height: 2px;
+  background-color: #fff;
+}
+
+.footer-top::after {
+  content: "Naša predajňa";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.75vw;
+  color: #fff;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2.25rem;
+  border-top: 2px solid #f8f8f8;
+  border-bottom: 2px solid #f8f8f8;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-middle ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-middle ul li {
+  color: #000;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.footer-middle ul li a {
+  color: #000;
+  transition: 0.2s ease;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.footer-middle .adress-info li:first-child {
+  font-size: 1.2rem;
+}
+
+.footer-middle .adress-info li:last-child {
+  color: #000;
+}
+
+.footer-middle .adress-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-middle .adress-info li {
+  color: #b6b6b6;
+  font-size: 1rem;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-bottom div {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-bottom div a {
+  color: #000;
+}
+
+.footer-bottom div a ion-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.footer-bottom img {
+  width: 8vw;
+}
