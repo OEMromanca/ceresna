@@ -32,45 +32,60 @@ ul {
 button {
   outline: none;
   border: none;
+  cursor: pointer;
+  background: none;
+}
+
+input {
+  border: none;
+  outline: none;
 }
 
 .notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
   background-color: #000;
   position: fixed;
   top: 0;
-  height: 25px;
-  padding-block: 0.25rem;
-  color: #fff;
-  text-align: center;
-  font-size: 0.85rem;
+
+  height: 31px;
+  padding-block: 4px;
+
   z-index: 2;
+
+  font-size: 13px;
+  color: #d4d4d4;
 }
 
 .main-header {
   position: fixed;
   top: 25px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   height: 140px;
   width: 100%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8509803921568627);
   -webkit-box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.1);
-  opacity: 0.9;
-  z-index: 1; /* uisti sa, že header je pod notif */
 
   padding-left: 314px;
   padding-right: 314px;
+
+  z-index: 1;
 }
 
 .main-header nav a {
+  font-size: 14px;
   text-transform: uppercase;
-  color: rgb(11, 29, 37);
+  color: #0b1d25;
   font-weight: 400;
-  font-size: 1rem;
 }
 
 .left-nav {
@@ -93,6 +108,9 @@ button {
   padding-inline: 4px;
   color: #fff;
   background: #000;
+
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .icon-inner,
@@ -121,15 +139,6 @@ svg {
   padding: 0 0 182px 314px;
 
   z-index: -1;
-}
-
-.action-button {
-  padding: 17px 20px;
-  font-size: 0.9rem;
-  color: #000;
-  background-color: #ffffff80;
-  cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .slider-wrapper {
@@ -194,24 +203,26 @@ svg {
   content: "NOVINKA";
   color: #fff;
 
-  font-weight: 500;
   font-size: 14px;
 
   position: absolute;
   top: 20px;
   left: 25px;
 
-  background-color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  background-color: #000000;
 
   z-index: 1;
-  width: 77px;
+  width: 76px;
   height: 31px;
 }
 
 .carousel li a {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   position: relative;
 }
 
@@ -233,11 +244,14 @@ svg {
 }
 
 .desc h3 {
-  font-weight: 600;
+  font-size: 14px;
+  color: #0b1d25;
+  font-weight: bold;
 }
 
 .desc div p {
-  font-weight: 400;
+  font-size: 14px;
+  color: #0b1d25;
 }
 
 .hero-txt {
@@ -249,8 +263,8 @@ svg {
 .hero-txt p {
   background: #000;
   padding: 6px 9px;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
@@ -261,7 +275,7 @@ h4 {
 }
 
 .hero-txt h1 {
-  font-size: 59px;
+  font-size: 75px;
   font-weight: 300;
   margin-top: 14px;
   margin-left: -3px;
@@ -277,12 +291,12 @@ h4 {
 }
 
 .hero-txt button {
-  font-size: 13px;
-  color: #000;
-  background-color: rgb(215, 205, 194);
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.388);
   cursor: pointer;
-  height: 49px;
-  width: 119px;
+  height: 48px;
+  width: 118px;
+  color: #0b1d25;
 }
 
 .container {
@@ -295,15 +309,15 @@ h4 {
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 7rem;
+  margin-bottom: 112px;
 
   height: 110px;
 }
 
 .companies div {
-  height: 2px;
-  width: 100px;
-  background-color: #f1f1f1;
+  width: 108px;
+  height: 1px;
+  background-color: #e4e4e4;
 }
 
 .companies li {
@@ -318,24 +332,21 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10rem;
+  gap: 215px;
 }
 
 .state {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 48px;
   background-color: #fbfbfb;
   padding-inline: 54px;
 }
 
 .state h1 {
-  color: #000;
-
+  font-size: 75px;
+  color: #000000;
   font-weight: 300;
-  font-size: 56px;
-
-  margin-bottom: 5px;
 }
 
 .state article div {
@@ -346,8 +357,11 @@ h4 {
 }
 
 .state article div p {
+  width: 379px;
   font-size: 14px;
-  margin-bottom: 40px;
+  line-height: 23px;
+  color: #777777;
+  margin-bottom: 15px;
 }
 
 .state img {
@@ -363,18 +377,21 @@ h4 {
   width: 144px;
   font-size: 14px;
   background: none;
-  font-weight: 600;
   cursor: pointer;
+
+  color: #000000;
+  font-weight: bold;
 }
 
 .read-more-btn::after {
   content: "";
   position: absolute;
   right: 0;
-  height: 1.6px;
-  width: 32px;
-  background-color: #000;
   transition: 0.2s ease;
+
+  width: 38px;
+  height: 1px;
+  background-color: #000000;
 }
 
 /* BLOG */
@@ -386,8 +403,8 @@ h4 {
 }
 
 .blog h1 {
-  font-size: 39px;
-  color: #000;
+  font-size: 40px;
+  color: #000000;
   font-weight: 300;
 }
 
@@ -399,7 +416,7 @@ h4 {
 }
 
 .blog-list li {
-  width: 31%;
+  width: 414px;
 }
 
 .blog-list li a {
@@ -411,24 +428,28 @@ h4 {
 }
 
 .img-cover {
-  content: "";
+  width: 334px;
+  height: 351px;
   background-color: #f5f5f5;
-  width: 333px;
-  height: 333px;
 }
 
 .blog-list li a img {
   position: relative;
-  width: 100%;
-  height: 100%;
-  transform: translate(18%, 18%);
+  width: 334px;
+  height: 351px;
+  transform: translate(80px, 75px);
 }
 
 .blog-list li a article {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  max-width: 288px;
+  gap: 19px;
+
+  width: 290px;
+  height: 179px;
+  font-size: 14px;
+  line-height: 23px;
+  color: #777777;
 }
 
 .blog-list li a article h2,
@@ -438,7 +459,7 @@ h4 {
 
 .blog-list li a article h2 {
   font-weight: 350;
-  margin-top: -28px;
+  margin-top: -10px;
 }
 
 .blog-list li a article p {
@@ -477,61 +498,48 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
 }
 
 .news article {
   display: flex;
   flex-direction: column;
+  gap: 2px;
   align-items: center;
-  gap: 0.8rem;
   text-align: center;
-  width: 19rem;
 }
 
 .news article h2 {
-  color: #000;
-  font-weight: 350;
-  font-size: 30px;
+  font-size: 40px;
+  color: #000000;
+  font-weight: 300;
 }
 
 .news article p {
+  width: 308px;
   font-size: 14px;
+  line-height: 23px;
+  color: #777777;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .email-sender {
   display: flex;
   align-items: center;
-  padding-block: 6px;
+  padding-block: 12px;
   border-bottom: 1px solid #000;
 }
 
 .email-sender input {
-  border: none;
-  outline: none;
-  width: 19rem;
+  width: 378px;
   text-align: center;
-  font-size: 1.2rem;
-  padding-block: 0.5rem;
-  padding-inline: 0.75rem;
+  font-size: 19px;
 }
 
 .email-sender input::placeholder {
-  color: #f4f3f3;
-}
-
-.email-sender button {
-  background: none;
-  cursor: pointer;
-}
-
-.email-sender button ion-icon {
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-:host .ion-icon {
-  stroke: currentcolor;
+  font-size: 19px;
+  color: #d7d2d2;
+  font-weight: 300;
 }
 
 /* INSTAGRAM */
@@ -559,10 +567,11 @@ h4 {
 }
 
 .instagram-header h1 {
-  color: #000;
   font-weight: 300;
-  font-size: 35px;
   margin-bottom: 5px;
+
+  font-size: 40px;
+  color: #000000;
 }
 
 .instagram-header a {
@@ -618,7 +627,9 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-  color: #fff;
+  color: #fffefe;
+
+  font-weight: 300;
 }
 
 .footer-middle {
@@ -648,16 +659,11 @@ footer {
 
 .footer-middle ul li a {
   color: #000;
-  font-weight: 400;
   font-size: 14px;
 }
 
 .footer-middle .adress-info li:first-child {
   font-size: 20px;
-  color: #000;
-}
-
-.footer-middle .adress-info li:last-child {
   color: #000;
 }
 
@@ -668,8 +674,9 @@ footer {
 }
 
 .footer-middle .adress-info li {
-  color: #b6b6b6;
   font-size: 14px;
+  line-height: 21px;
+  color: #777777;
 }
 
 .footer-bottom {
@@ -681,18 +688,5 @@ footer {
 .footer-bottom div {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-}
-
-.footer-bottom div a {
-  color: #000;
-}
-
-.footer-bottom div a ion-icon {
-  width: 1.4rem;
-  height: 1.4rem;
-}
-
-.footer-bottom img {
-  width: 8vw;
+  gap: 6px;
 }
