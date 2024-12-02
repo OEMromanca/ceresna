@@ -41,6 +41,10 @@ input {
   outline: none;
 }
 
+.icon-inner img {
+  width: 16px;
+}
+
 .notification {
   display: flex;
   justify-content: center;
@@ -111,14 +115,6 @@ input {
 
   font-size: 13px;
   font-weight: 800;
-}
-
-.icon-inner,
-.ion-icon,
-svg {
-  display: block;
-  width: 18px;
-  height: 18px;
 }
 
 .main-container {
@@ -228,7 +224,7 @@ svg {
 
 .desc {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
 
   color: #000;
@@ -530,6 +526,11 @@ h4 {
   border-bottom: 1px solid #000;
 }
 
+.email-sender img {
+  height: 23px;
+  width: 23px;
+}
+
 .email-sender input {
   width: 378px;
   text-align: center;
@@ -683,10 +684,16 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 12px;
 }
 
 .footer-bottom div {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.footer-bottom svg {
+  width: 20px;
+  height: 20px;
 }
