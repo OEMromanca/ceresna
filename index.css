@@ -1,24 +1,36 @@
-body {
-  max-width: 100%;
-  max-height: 100%;
-
-  margin: 0 auto;
-
-  background-color: #fff;
-
-  font-family: "Source Sans 3", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-
-  font-size: 1rem;
-}
-
+/* Resetovanie základného nastavenia pre všetky elementy */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Základné nastavenia tela */
+body {
+  min-height: 100vh; /* Uistíme sa, že telo zaberá aspoň celú výšku okna */
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: "Source Sans 3", Arial, sans-serif; /* Pridáme fallback font pre prípad, že Google Fonty nie sú dostupné */
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5; /* Nastavenie riadkovania pre lepšiu čitateľnosť */
+
+  /* Vyhladzovanie písma */
+  -webkit-font-smoothing: antialiased; /* Pre Webkit/Blink prehliadače ako Chrome */
+  -moz-osx-font-smoothing: grayscale; /* Pre Firefox na macOS */
+}
+
+/* Definícia pre zabezpečenie správneho box modelu */
+html {
+  box-sizing: border-box;
+}
+
+/* Doplnenie pre responzívnosť */
+meta[name="viewport"] {
+  content: "width=device-width, initial-scale=1.0";
 }
 
 a {
