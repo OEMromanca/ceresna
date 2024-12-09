@@ -7,11 +7,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
 /* Základné nastavenia tela */
 body {
-  min-height: 100vh; /* Uistíme sa, že telo zaberá aspoň celú výšku okna */
-  width: 100%;
-  margin: 0 auto;
+  /* min-height: 100vh; /* Uistíme sa, že telo zaberá aspoň celú výšku okna */
+  /* width: 100%;
+  margin: 0 auto; */
   background-color: #fff;
   font-family: "Source Sans 3", Arial, sans-serif; /* Pridáme fallback font pre prípad, že Google Fonty nie sú dostupné */
   font-weight: 300;
@@ -23,14 +30,8 @@ body {
   -moz-osx-font-smoothing: grayscale; /* Pre Firefox na macOS */
 }
 
-/* Definícia pre zabezpečenie správneho box modelu */
 html {
   box-sizing: border-box;
-}
-
-/* Doplnenie pre responzívnosť */
-meta[name="viewport"] {
-  content: "width=device-width, initial-scale=1.0";
 }
 
 a {
